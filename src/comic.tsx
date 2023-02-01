@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { StyledComic } from "./StyledComic";
+import { ComicContainer, ComicImage } from "./StyledComic";
 
 interface Props {
 	image: string;
@@ -9,9 +9,8 @@ interface Props {
 
 export const Comic: FC<Props> = ({ image, alt, caption }) => {
 	return (
-		<StyledComic>
-			<img src={image} alt={alt} />
-			<p>{caption}</p>
-		</StyledComic>
+		<ComicContainer>
+			<ComicImage src={image} alt="Weber smash" />
+		</ComicContainer>
 	);
 };

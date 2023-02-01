@@ -1,22 +1,16 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const StyledComic = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px;
-  padding: 10px;
-  background-color: #f2f2f2;
-  border-radius: 10px;
+export const ComicContainer = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+`;
 
-  img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
-
-  p {
-    text-align: center;
-    font-size: 16px;
-  }
+export const ComicImage = styled.img`
+	max-width: 90%;
+	max-height: 90%;
+	border: 10px solid black;
 `;
