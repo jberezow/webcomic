@@ -12,8 +12,9 @@
 /build
 
 # assets
-/comics/images
-/comics/metadata
+/src/assets
+/src/assets/comics/images
+/src/assets/comics/metadata
 
 # vscode
 .vscode
