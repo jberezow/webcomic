@@ -2,23 +2,22 @@ import React from "react";
 
 import "./App.css";
 import { Comic } from "./comic";
-import yellowBuckets from "./assets/comics/images/yellowBuckets.png";
+import { Banner } from "./banner";
+import { AppContainer } from "./StyledDivs";
 
-// Styles
-import { MainTitle } from "./StyledDivs";
+import banner from "./assets/Banner.png";
+import yellowBuckets from "./assets/comics/images/yellowBuckets.png";
 
 const App: React.FC = () => {
 	return (
-		<header>
-			<div>
-				<MainTitle>Pucks to the Net</MainTitle>
-			</div>
+		<AppContainer>
+			<Banner image={banner} alt="Pucks to the Net" />
 			<Comic
 				image={yellowBuckets}
 				alt="Weber Smash"
 				caption="The Predators incite controversy by electing to swap navy blue helmets for golden."
 			/>
-		</header>
+		</AppContainer>
 	);
 };
 
