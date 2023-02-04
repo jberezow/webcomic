@@ -31,11 +31,9 @@ export const SiteNavbar: FC = () => {
 	return (
 		<Navbar>
 			<NavBarMenu>
-				<SiteNavBarItem control="First" />
-				<SiteNavBarItem control="Back" />
-				<SiteNavBarItem control="RANDOM" />
-				<SiteNavBarItem control="Forward" />
-				<SiteNavBarItem control="Game Winner" />
+				<SiteNavBarItem control="Comic" />
+				<SiteNavBarItem control="Blog" />
+				<SiteNavBarItem control="About" />
 			</NavBarMenu>
 		</Navbar>
 	);
