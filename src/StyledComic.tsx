@@ -33,15 +33,17 @@ export const NavBarMenu = styled.div`
 	justify-content: space-evenly;
 	width: 100%;
 	height: 50px;
+	align-content: space-around;
 	// border: 10px solid black;
 `;
 
-export const NavBarItem = styled.nav`
-	display: flex;
-	color: #ffffff;
-	align-items: center;
-	text-decoration: none;
-	height: 100%;
+export const NavBarItem = styled.img`
+	display: block;
+	max-width: 16%;
+	max-height: 100%;
+	align-self: center;
+	width: auto;
+	height: auto;
 	cursor: pointer;
 	&.active {
 		color: #000000;

@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { ComicContainer, ComicImage } from "./StyledComic";
-import { ComicNavbar } from "./comicNavbar";
+import { ComicNavbar } from "./navbar";
 
 interface ComicProps {
 	image: string;

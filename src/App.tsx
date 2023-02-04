@@ -5,7 +5,7 @@ import { Comic } from "./comic";
 import { Banner } from "./banner";
 import { AppContainer } from "./StyledDivs";
 
-import banner from "./assets/Banner.png";
+import banner from "./assets/banner.png";
 import yellowBuckets from "./assets/comics/images/yellowBuckets.png";
 
 const App: React.FC = () => {
