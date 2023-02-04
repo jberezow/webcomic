@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { ComicContainer, ComicImage } from "./StyledComic";
-import { Navbar } from "./navbar";
+import { ComicNavbar } from "./comicNavbar";
 
 interface ComicProps {
 	image: string;
@@ -12,7 +12,7 @@ export const Comic: FC<ComicProps> = ({ image, alt, caption }) => {
 	return (
 		<ComicContainer>
 			<ComicImage src={image} alt={alt} />
-			<Navbar />
+			<ComicNavbar />
 		</ComicContainer>
 	);
 };

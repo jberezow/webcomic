@@ -4,24 +4,22 @@ export const StyledBannerContainer = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 20vh;
-	width: 100vw;
+	height: 10%;
+	width: 80%;
 	margin-top: 20px;
-	margin-bottom: 20px;
-	padding: 0;
 	position: relative;
 `;
 
 export const StyledBannerImg = styled.img`
-	max-width: 70%;
-	max-height: 80%;
+	max-width: 100%;
+	max-height: 100%;
 `;
 
 export const AppContainer = styled.div`
-	display: flex;
+	display: inline-flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: safe center;
+	justify-content: safe flex-start;
 	height: 100vh;
 	width: 100vw;
 `;
