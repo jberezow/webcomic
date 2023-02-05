@@ -7,6 +7,7 @@ export const StyledBannerContainer = styled.div`
 	height: 10%;
 	width: 80%;
 	margin-top: 20px;
+	padding-bottom: 10px;
 	position: relative;
 `;
 
@@ -20,6 +21,7 @@ export const AppContainer = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: safe flex-start;
-	height: 100vh;
-	width: 100vw;
+	max-width: 100vw;
+	// height: 100vh;
+	// width: 100vw;
 `;

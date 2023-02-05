@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import { Navbar, NavBarItem, NavBarMenu } from "./StyledComic";
-// import { navAbout } from "./assets/nav/navAbout.png";
 import navBack from "./assets/nav/navBack.png";
 import navFirst from "./assets/nav/navFirst.png";
 import navForward from "./assets/nav/navForward.png";
@@ -13,7 +12,7 @@ interface NavBarItemProps {
 }
 
 const ComicNavBarItem: FC<NavBarItemProps> = ({ control, img }) => {
-	return <NavBarItem src={img} alt={control}></NavBarItem>;
+	return <NavBarItem src={img} alt={control} />;
 };
 
 export const ComicNavbar: FC = () => {
@@ -30,18 +29,18 @@ export const ComicNavbar: FC = () => {
 	);
 };
 
-// const SiteNavBarItem: FC<NavBarItemProps> = ({ control }) => {
-// 	return <NavBarItem>{control}</NavBarItem>;
-// };
+const SiteNavBarItem: FC<NavBarItemProps> = ({ control, img }) => {
+	return <NavBarItem src={img} alt={control} />;
+};
 
-// export const SiteNavbar: FC = () => {
-// 	return (
-// 		<Navbar>
-// 			<NavBarMenu>
-// 				<SiteNavBarItem control="Comic" />
-// 				<SiteNavBarItem control="Blog" />
-// 				<SiteNavBarItem control="About" />
-// 			</NavBarMenu>
-// 		</Navbar>
-// 	);
-// };
+export const SiteNavbar: FC = () => {
+	return (
+		<Navbar>
+			<NavBarMenu>
+				<SiteNavBarItem control="Comic" img={navOther} />
+				<SiteNavBarItem control="Blog" img={navOther} />
+				<SiteNavBarItem control="About" img={navOther} />
+			</NavBarMenu>
+		</Navbar>
+	);
+};

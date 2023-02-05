@@ -25,6 +25,7 @@ export const Navbar = styled.div`
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
+	margin-bottom: 10px;
 	// border: 10px solid black;
 `;
 
@@ -32,7 +33,6 @@ export const NavBarMenu = styled.div`
 	display: flex;
 	justify-content: space-evenly;
 	width: 100%;
-	height: 50px;
 	align-content: space-around;
 	// border: 10px solid black;
 `;
