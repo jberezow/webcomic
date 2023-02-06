@@ -5,6 +5,8 @@ import navFirst from "./assets/nav/navFirst.png";
 import navForward from "./assets/nav/navForward.png";
 import navLast from "./assets/nav/navLast.png";
 import navOther from "./assets/nav/navOther.png";
+import navRandom from "./assets/nav/navRandom.png";
+import navRandomRed from "./assets/nav/navRandomRed.png";
 
 interface NavBarItemProps {
 	control: string;
@@ -15,13 +17,38 @@ const ComicNavBarItem: FC<NavBarItemProps> = ({ control, img }) => {
 	return <NavBarItem src={img} alt={control} />;
 };
 
+interface DynamicNavBarItemProps {
+	control: string;
+	img: string;
+	imgRed: string;
+}
+
+const DynamicComicNavBarItem: FC<DynamicNavBarItemProps> = ({
+	control,
+	img,
+	imgRed,
+}) => {
+	return (
+		<NavBarItem
+			src={img}
+			alt={control}
+			onMouseOver={(e) => (e.currentTarget.src = imgRed)}
+			onMouseOut={(e) => (e.currentTarget.src = img)}
+		/>
+	);
+};
+
 export const ComicNavbar: FC = () => {
 	return (
 		<Navbar>
 			<NavBarMenu>
 				<ComicNavBarItem control="First" img={navFirst} />
 				<ComicNavBarItem control="Back" img={navBack} />
-				<ComicNavBarItem control="RANDOM" img={navOther} />
+				<DynamicComicNavBarItem
+					control="Random"
+					img={navRandom}
+					imgRed={navRandomRed}
+				/>
 				<ComicNavBarItem control="Forward" img={navForward} />
 				<ComicNavBarItem control="Game Winner" img={navLast} />
 			</NavBarMenu>
