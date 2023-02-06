@@ -45,6 +45,9 @@
 	},
 	"devDependencies": {
 		"@types/styled-components": "^5.1.26",
-		"typescript-plugin-styled-components": "^2.0.0"
+		"@types/webpack-env": "^1.18.0",
+		"typescript-plugin-styled-components": "^2.0.0",
+		"webpack": "^5.75.0",
+		"webpack-cli": "^5.0.1"
 	}
 }
