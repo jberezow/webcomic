@@ -1,8 +1,16 @@
 import React, { FC } from "react";
 import { Navbar, NavBarItem, NavBarMenu } from "./StyledComic";
-import navBack from "./assets/nav/navBack.png";
+
+import navComics from "./assets/nav/navComics.png";
+import navComicsRed from "./assets/nav/navComicsRed.png";
+import navAbout from "./assets/nav/navAbout.png";
+import navAboutRed from "./assets/nav/navAboutRed.png";
+
 import navFirst from "./assets/nav/navFirst.png";
+import navBack from "./assets/nav/navBack.png";
+import navBackRed from "./assets/nav/navBackRed.png";
 import navForward from "./assets/nav/navForward.png";
+import navForwardRed from "./assets/nav/navForwardRed.png";
 import navLast from "./assets/nav/navLast.png";
 import navOther from "./assets/nav/navOther.png";
 import navRandom from "./assets/nav/navRandom.png";
@@ -43,13 +51,21 @@ export const ComicNavbar: FC = () => {
 		<Navbar>
 			<NavBarMenu>
 				<ComicNavBarItem control="First" img={navFirst} />
-				<ComicNavBarItem control="Back" img={navBack} />
+				<DynamicComicNavBarItem
+					control="Back"
+					img={navBack}
+					imgRed={navBackRed}
+				/>
 				<DynamicComicNavBarItem
 					control="Random"
 					img={navRandom}
 					imgRed={navRandomRed}
 				/>
-				<ComicNavBarItem control="Forward" img={navForward} />
+				<DynamicComicNavBarItem
+					control="Forward"
+					img={navForward}
+					imgRed={navForwardRed}
+				/>
 				<ComicNavBarItem control="Game Winner" img={navLast} />
 			</NavBarMenu>
 		</Navbar>
@@ -64,9 +80,17 @@ export const SiteNavbar: FC = () => {
 	return (
 		<Navbar>
 			<NavBarMenu>
-				<SiteNavBarItem control="Comic" img={navOther} />
+				<DynamicComicNavBarItem
+					control="Comics"
+					img={navComics}
+					imgRed={navComicsRed}
+				/>
 				<SiteNavBarItem control="Blog" img={navOther} />
-				<SiteNavBarItem control="About" img={navOther} />
+				<DynamicComicNavBarItem
+					control="About"
+					img={navAbout}
+					imgRed={navAboutRed}
+				/>
 			</NavBarMenu>
 		</Navbar>
 	);
