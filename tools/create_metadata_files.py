@@ -1,7 +1,6 @@
 import json
 import argparse
 import glob
-import os
 import time
 
 import matplotlib.pyplot as plt
@@ -13,9 +12,6 @@ from comic import Comic
 
 
 def main(source_folder: str, target_folder: str, force: bool) -> None:
-  dir_path = os.path.join(os.getcwd())
-  source_folder = os.path.join(dir_path, source_folder)
-  target_folder = os.path.join(dir_path, target_folder)
   print(f'Creating metadata files for {source_folder} and saving to {target_folder}')
 
   # Get all the files in the source folder
@@ -23,10 +19,15 @@ def main(source_folder: str, target_folder: str, force: bool) -> None:
 
   for comic in comics:
     comic_handle = comic.split("\\")[-1].split(".")[0]
-    tentative_path = os.path.abspath(f'{target_folder}/{comic_handle}.json')
+    json_path = f'{target_folder}\\{comic_handle}.json'
 
-    if not force and glob.glob(tentative_path):
-      print(f'File {tentative_path} already exists. Skipping...')
+    if not force and glob.glob(json_path):
+      print(f'File {json_path} already exists. Skipping...')
+
+      # TODO Workaround: Validate the JSON path in case OS differences
+      comic_info = Comic(comic, json_path)
+      comic_info.load_comic()
+      comic_info.update_path(comic)
       continue
     else:
       print(f'Creating metadata file for {comic}...')
@@ -41,7 +42,7 @@ def main(source_folder: str, target_folder: str, force: bool) -> None:
       time.sleep(1.0)
 
       comic_info.input_comic_info()
-      with open(tentative_path, 'w') as f:
+      with open(json_path, 'w') as f:
         json.dump(comic_info.__dict__, f)
 
 if __name__ == '__main__':
