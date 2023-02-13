@@ -8,10 +8,9 @@ import { AppContainer } from "./StyledDivs";
 import banner from "./assets/banner.png";
 import yellowBuckets from "./assets/comics/images/yellowBuckets.png";
 
-import comicList from "./comicList";
+// import comicList from "./comicList";
 
 const App: React.FC = () => {
-	console.log(comicList);
 	return (
 		<AppContainer>
 			<Banner image={banner} alt="Pucks to the Net" />
